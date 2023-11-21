@@ -1,4 +1,4 @@
-	AREA SR5,CODE,READONLY
+	AREA SR11,CODE,READONLY
 	ENTRY
 	mov  R0, #3     ; ax = 5
 	mov  R2, #3    ; cx = 10
