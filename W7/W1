@@ -1,0 +1,24 @@
+	AREA FUNC,CODE,READONLY
+	ENTRY
+	MOV a2,#5
+	BL POWER4
+	MOV v1,a1
+	
+	MOV a2,#4
+	BL POWER4
+	MOV v2,a1
+	MOV a2,#3
+	BL POWER4
+	MOV v3,a1	
+	SUB v4,v1,v2
+	ADD v4,v4,v2
+	MOV a1,v4
+	B EXIT
+POWER4 MUL a1,a2,a2
+	MUL a1,a2,a1
+	MUL a1,a2,a1
+	MUL a1,a2,a1
+	BX LR
+EXIT 
+LOOP B LOOP
+	end
